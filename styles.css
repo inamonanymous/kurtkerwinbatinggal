@@ -1,0 +1,413 @@
+:root {
+    --black: #111;
+    --white: #fff;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #000000;
+}
+header, 
+section, 
+footer {
+    max-width: 100%;
+    overflow:hidden;
+}
+header > div, 
+section > div, 
+footer > div {
+    width: 1140px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+/*
+-----------------------------
+-----------------------------
+UI PROPERTIES
+-----------------------------
+-----------------------------
+*/
+.bounce {
+    transition: transform 0.3s ease-out;
+}
+h1, 
+h2,
+h3,
+h4,
+h5,
+h6,
+p.alt-2 {
+    font-family: 'PT Sans';
+    color: white;
+}
+p, 
+p.alt-3 {
+    font-family: 'Inter';
+    color: white;
+}
+h1 {
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+h2 {
+    font-size: 42px;
+}
+h3 {
+    font-size: 27px;
+    font-weight: 500;
+}
+h4 {
+    font-size: 22px;
+}
+h5 {
+    font-size: 20px;
+}
+h6 {
+    font-size: 18px;
+    font-weight: 500;
+}
+p {
+    font-size: 17px;
+}
+p.alt-2 {
+    font-size: 16px;
+    
+}
+p.alt-3 {
+    font-size: 14px;
+}
+a {
+    text-decoration: none;
+    color: unset;
+    position: relative;
+    transition: 0.3s;
+}
+a:before{
+    content: '';
+    position: absolute;
+    background: white;
+    left: 0;
+}
+a:hover:before {
+    right: 0;
+    bottom: 0;
+    height: 2px;
+}
+button {
+    font-style: 'PT Sans';
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    background: #2D75B6;
+    border-radius: 27px;
+    padding: 15px 45px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+button.alt-2 {
+    background: white;
+    color: #205F8A;
+}
+/*
+-----------------------------
+-----------------------------
+HEADER
+-----------------------------
+-----------------------------
+*/
+#header {
+    background-color: var(--black);
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+#header.sticky {
+    position: fixed;
+    width: 100%;
+    transform: translateY(0);
+}
+#header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+#header ul {
+    display: flex;
+    list-style: none;
+}
+#header nav ul {
+    gap: 0 60px;
+    font-family: 'PT Sans';
+    color: var(--white);
+    font-weight: 700;
+    font-size: 18px;
+}
+#header > div div:nth-child(3) ul {
+    gap: 0 10px;
+}
+#header > div div:nth-child(3) ul img{
+    border-radius: 60px;
+    transition: 0.3s;
+}
+#header > div div:nth-child(3) ul img:hover {
+    transform: scale(1.2);
+}
+/*
+-----------------------------
+-----------------------------
+ALERT
+-----------------------------
+-----------------------------
+*/
+#alert > div > div {
+    display: flex;
+    gap: 0 15px;
+}
+#alert > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    color: white;
+}
+#alert {
+    background: #C61111;
+}
+#alert p.alt-2, 
+#alert p.alt-3 {
+    font-weight: 700;
+}
+/*
+-----------------------------
+-----------------------------
+BANNER
+-----------------------------
+-----------------------------
+*/
+#banner {
+    background: url('assets/hero.jpg') no-repeat top center;
+    background-size: cover;
+}
+#banner > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 45px 0;
+    padding: 185px 0 345px;
+}
+/*
+-----------------------------
+-----------------------------
+AWARDS
+-----------------------------
+-----------------------------
+*/
+#awards > div {
+    padding: 50px 0 20px;
+    color: white;
+    text-align: center;
+}
+#awards .left_absolute_img{
+    position: absolute;
+    left: -150px;
+}
+#awards .right_absolute_img{
+    position: absolute;
+    right: -150px;
+    top: 150px;
+}
+#awards {
+    background: #000000;
+}
+#awards .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 140px 0 70PX;
+    gap: 25px;
+}
+#awards .box {
+    width: 355px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 35px 0 30px;
+    border-radius: 10px;
+    position: relative;
+    justify-content: space-between;
+}
+#awards .box img {
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%);
+}
+#awards .screenshots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 45px 35px;
+    margin-top: 30px;
+}
+#awards .screenshots .img-con {
+    position: relative;
+    transition: 0.3s;
+    overflow: clip;
+}
+
+#awards .screenshots .img-con:before {
+    position: absolute;
+    content: '';
+    background: rgba(10,6,244,0.2);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateX(-100%);
+    transition: 0.3s;
+}
+
+#awards .screenshots .img-con:hover:before {
+    transform: translateX(0);
+}
+/*
+-----------------------------
+-----------------------------
+INSTRUCTIONS
+-----------------------------
+-----------------------------
+*/
+#instructions > div {
+    padding: 110px 0 0;
+}
+#instructions .text-con {
+    margin-bottom: 155px;
+}
+#instructions > div > h3 {
+    margin: 30px 0 40px;
+}
+#instructions > div h3 > span{
+    color: #FC4E73;
+}
+#instructions .objectives ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px 30px;
+    margin: 25px 0 90px;
+}
+#instructions .objectives ul li {
+    display: inherit;
+    align-items: inherit;
+    gap: 0 25px;
+    width: 350px;
+    text-align: start;
+    position: relative;
+}
+#instructions .objectives ul li:before {
+    content: url('assets/Fill-1.svg');
+    position: absolute;
+    top: 0;
+    left: 30px;
+}
+#instructions .left_absolute_img{
+    position: absolute;
+    left: -150px;
+}
+#instructions .right_absolute_img{
+    position: absolute;
+    right: -150px;
+    top: 150px;
+}
+/*
+-----------------------------
+-----------------------------
+SHOP
+-----------------------------
+-----------------------------
+*/
+#shop {
+    background: url('assets/amongus_merchbanner.png.png') no-repeat top center;
+    background-size: cover;
+}
+#shop > div {
+    padding: 135px 0 150px;
+}
+#shop .text-con {
+    text-align: start;
+}
+#shop .text-con h4 {
+    margin: 20px 0 25px;
+}
+#shop > div img {
+    position: absolute;
+    top: 70px;
+    left: 335px;
+}
+#black {
+    height: 200px;
+}
+/*
+-----------------------------
+-----------------------------
+FOOTER
+-----------------------------
+-----------------------------
+*/
+#footer {
+    background: linear-gradient(90deg, rgba(45,117,182,1) 0%, rgba(28,28,28,1) 50%);
+}
+#footer > div {
+    display: flex;
+    text-align: start;
+    justify-content: space-between;
+    padding: 45px 0 40px;
+}
+#footer h3 {
+   font-size: 30px;
+}
+#footer .faqs {
+    width: 660px;
+}
+#footer .email {
+    width: 560px;
+}
+#footer .email-container {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid #333;
+    position: relative;
+}
+#footer .email-container input {
+    border: none;
+    padding: 10px;
+    width: 250px;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+} 
+#footer .email-container input::placeholder {
+    color: #999;
+}
+#footer .email-container button {
+    background-color: #007bff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    right: 0;
+}
+#footer .email-container button:hover {
+    background-color: #0056b3;
+}
+#footer > div .faqs h3, #footer > div .email h3 {
+    margin-bottom: 30px;
+}
